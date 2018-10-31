@@ -59,8 +59,9 @@ jobs:
       env:
         - IMAGE_NAME: node8
         - NODE_MAJOR_VERSION: 8
+        - NODE_MINOR_VERSION: 12
       script:
-        - ./.scripts/.build.sh "${DH_REPO}" "${IMAGE_NAME}" "./node" "NODE_CODE=v${NODE_MAJOR_VERSION}.x";
+        - ./.scripts/.build.sh "${DH_REPO}" "${IMAGE_NAME}" "./node" "NODE_CODE=v${NODE_MAJOR_VERSION}.${NODE_MINOR_VERSION}.x";
         - |
           if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
             COMMIT_MESSAGE="${TRAVIS_COMMIT_MESSAGE}" ./node/.publish.sh "${DH_REPO}:${IMAGE_NAME}";
