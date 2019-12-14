@@ -15,6 +15,7 @@ All runtimes are built from official sources using the methods documented in the
 
 - Go (`go`)
 - Node.js (`node*`)
+- Oracle + Node + Ruby (`oracle-rails-node`)
 
 ### Release Notes
 The images are found in the [DockerHub registry](https://hub.docker.com/r/govtechsg/base-images), and the names of the different types of images are added as a tag. For example given a type of image called `xyz`, it will be available under the repository URL `govtechsg/base-images:xyz-latest`. Specific versions can be found in the [DockerHub Tags page](https://hub.docker.com/r/govtechsg/base-images/tags/)
@@ -44,13 +45,22 @@ The `*` is available for versions of Node which satisfy the following criteria:
 ##### Notes
 Generally compiled Node.js binary that comes with Yarn.
 
-General compilation allows for debugging and performance profiling.
+General compilation allows for debugging and performance profiling.s
 
 Available runtime commands:
 
 - `npm`
 - `node`
 - `yarn`
+
+#### Oracle + Rails + Node (`oracle-rails-node`)
+Canonical Tag: `oracle-rails-node-<ORACLE_VERSION>-<RAILS_VERSION>-<NODE_VERSION>`  
+Latest URL: `govtechsg/base-images:node*-latest`
+
+ORACLE_VERSION: `12.2`
+RAILS_VERSION: `2.3.1`
+NODE_VERSION: `7.1.0`
+
 
 ## Other Uses
 Images specified here can be uploaded to other repositories if you so wish. The commands are:

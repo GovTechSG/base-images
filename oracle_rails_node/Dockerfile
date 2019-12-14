@@ -93,4 +93,5 @@ RUN gem install passenger -v "${PASSENGER_VERSION}" --no-rdoc --no-ri && \
 # -------------------------------
 # entrypoint
 # -------------------------------
+COPY ./version-info /usr/bin
 ENTRYPOINT /bin/bash
