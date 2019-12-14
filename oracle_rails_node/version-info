@@ -1,0 +1,10 @@
+#!/bin/sh
+
+VERSION_NODE="$(node -v | cut -f 2 -d 'v')";
+printf "node:${VERSION_NODE}\n";
+
+VERSION_RUBY="$(ruby -v)";
+printf "ruby:${VERSION_RUBY}\n";
+
+VERSION_ORACLE=12.2
+printf "oracle:${VERSION_ORACLE}\n";
