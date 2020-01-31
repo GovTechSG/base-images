@@ -55,7 +55,7 @@ Available runtime commands:
 
 #### Oracle + Rails + Node (`oracle-rails-node`)
 Canonical Tag: `oracle-rails-node-<ORACLE_VERSION>-<RAILS_VERSION>-<NODE_VERSION>`  
-Latest URL: `govtechsg/base-images:node*-latest`
+Latest URL: `govtechsg/base-images:oracle-rails-node-latest`
 
 ORACLE_VERSION: `12.2`
 RAILS_VERSION: `2.3.1`
