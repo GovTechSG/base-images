@@ -1,4 +1,5 @@
 #!/bin/sh
+
 REPOSITORY_URL=$1;
 
 TAG="${REPOSITORY_URL}-next";
@@ -6,8 +7,8 @@ TAG_LATEST="${REPOSITORY_URL}-latest";
 
 VERSIONS=$(docker run --entrypoint="version-info" ${TAG});
 VERSION_NODE=$(printf "${VERSIONS}" | grep -e 'node:' | cut -f 2 -d ':');
-VERSION_RUBY=$(printf "${VERSIONS}" | grep npm | cut -f 2 -d ':');
-VERSION_ORACLE=$(printf "${VERSIONS}" | grep yarn | cut -f 2 -d ':');
+VERSION_RUBY=$(printf "${VERSIONS}" | grep -e ruby: | cut -f 2 -d ':');
+VERSION_ORACLE=$(printf "${VERSIONS}" | grep -e oracle: | cut -f 2 -d ':');
 EXISTENCE_TAG="node-${VERSION_NODE}_ruby-${VERSION_RUBY}_oracle-${VERSION_ORACLE}";
 EXISTENCE_REPO_URL="${REPOSITORY_URL}-${EXISTENCE_TAG}";
 VERSION_REPO_URL="${REPOSITORY_URL}-${VERSION_ORACLE}-${VERSION_RUBY}-${VERSION_NODE}";
