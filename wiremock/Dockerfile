@@ -1,8 +1,6 @@
-ARG ALPINE_VERSION="3.8.4"
+ARG ALPINE_VERSION="3.15"
 FROM alpine:${ALPINE_VERSION}
-LABEL maintainer="dev@joeir.net" \
-      version="1.0.0" \
-      description="A minimal Go base image to build Go applications with."
+LABEL description="A minimal Go base image to build Go applications with."
 ENV APK_TO_INSTALL="bash curl jq openjdk8-jre-base" \
     APK_TO_REMOVE="bash curl jq" \
     PATHS_TO_REMOVE="\

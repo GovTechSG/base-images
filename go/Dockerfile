@@ -1,4 +1,4 @@
-ARG ALPINE_VERSION="3.12.1"
+ARG ALPINE_VERSION="3.15"
 FROM alpine:${ALPINE_VERSION}
 LABEL maintainer="Ryan <ryan_goh@tech-gov-sg>" \
       version="1.0.0" \
