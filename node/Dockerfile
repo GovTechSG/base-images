@@ -1,3 +1,4 @@
+ARG NODE_MAJOR_VERSION
 FROM node:${NODE_MAJOR_VERSION}-alpine3.15
 
 COPY ./version-info /usr/bin
